@@ -1,7 +1,5 @@
 import React from 'react';
 
-const ListItem = () => (
-  <li>List Item</li>
-);
+const ListItem = ({ text }) => <li>{text}</li>;
 
 export default ListItem;

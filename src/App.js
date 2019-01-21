@@ -14,12 +14,11 @@ class App extends Component {
     this.setState({ inputValue: e.target.value });
   }
 
-  addTodo = newTodo => {
-    console.log('added');
-    this.setState(state => {
-      state.todos.push(newTodo);
-      state.inputValue = '';
-    });
+  addTodo = () => {
+    this.setState(state => ({
+      todos: [...state.todos, state.inputValue],
+      inputValue: ''
+    }));
   }
 
   render() {

@@ -1,13 +1,9 @@
 import React from 'react';
 import ListItem from './ListItem';
 
-const List = () => (
+const List = ({ todos }) => (
   <ul>
-    <ListItem />
-    <ListItem />
-    <ListItem />
-    <ListItem />
-    <ListItem />
+    {todos.map((item, i) => <ListItem text={item} key={i}/>)}
   </ul>
 );
 
