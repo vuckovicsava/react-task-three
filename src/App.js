@@ -21,14 +21,21 @@ class App extends Component {
     }));
   }
 
+  removeTodo = target => {
+    this.setState(state => ({
+      todos: state.todos.filter(todo => todo !== target)
+    }));
+  }
+
   render() {
+    const { inputValueChange, addTodo, removeTodo } = this;
     const { inputValue, todos } = this.state;
 
     return (
       <div className="App">
-        <Input inputValue={inputValue} inputValueChange={this.inputValueChange}/>
-        <List todos={todos}/>
-        <Button addTodo={this.addTodo}/>
+        <Input inputValue={inputValue} inputValueChange={inputValueChange}/>
+        <List todos={todos} removeTodo={removeTodo}/>
+        <Button addTodo={addTodo}/>
       </div>
     );
   }

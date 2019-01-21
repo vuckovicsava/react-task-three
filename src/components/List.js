@@ -1,9 +1,11 @@
 import React from 'react';
 import ListItem from './ListItem';
 
-const List = ({ todos }) => (
+const List = ({ todos, removeTodo }) => (
   <ul>
-    {todos.map((item, i) => <ListItem text={item} key={i}/>)}
+    {todos.map((item, i) => (
+      <ListItem removeTodo={removeTodo} text={item} key={i}/>
+    ))}
   </ul>
 );
 
