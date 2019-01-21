@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Button = () => (
-  <button>Button</button>
+const Button = ({ addTodo }) => (
+  <button onClick={addTodo}>Add New Todo</button>
 );
 
 export default Button;
