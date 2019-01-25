@@ -16,7 +16,6 @@ class App extends Component {
   }
 
   addTodo = () => {
-    console.log('called')
     this.setState(state => ({
       todos: [...state.todos, state.inputValue],
       inputValue: ''

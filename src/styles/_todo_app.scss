@@ -73,3 +73,34 @@
     }
   }
 }
+
+@media screen and (max-width: $sm) {
+  .todo-app {
+    margin: 1rem;
+  
+    &__header {
+      font-size: 2rem;
+    }
+  
+    &__input {
+      padding: .6rem 1.4rem;
+      font-size: 1.5rem;
+    }
+  
+    &__item {
+      font-size: 1.6rem;
+      padding: .8rem 1.6rem;
+  
+      .fas {
+        &:hover {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  
+    &__button {
+      padding: .6rem;
+      font-size: 1.6rem;
+    }
+  }
+}

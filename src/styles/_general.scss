@@ -9,3 +9,15 @@ html {
   font-family: 'Mallanna', sans-serif;
   font-size: 62.5%;
 }
+
+.empty {
+  color: $red;
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem;
+
+  @media screen and (max-width: $sm) {
+    font-size: 1.6rem;
+    margin: .8rem;
+  }
+}
