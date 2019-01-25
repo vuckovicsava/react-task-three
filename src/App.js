@@ -16,6 +16,7 @@ class App extends Component {
   }
 
   addTodo = () => {
+    console.log('called')
     this.setState(state => ({
       todos: [...state.todos, state.inputValue],
       inputValue: ''
@@ -37,7 +38,7 @@ class App extends Component {
         <Header text="todo app" />
         <Input inputValue={inputValue} inputValueChange={inputValueChange}/>
         <List todos={todos} removeTodo={removeTodo}/>
-        <Button addTodo={addTodo}/>
+        <Button addTodo={addTodo} inputValue={inputValue}/>
       </div>
     );
   }

@@ -1,7 +1,8 @@
 .todo-app {
-  border: 2px solid red;
   max-width: 60rem;
   margin: 10rem auto;
+  border: 1px solid $gray-light;
+  box-shadow: 0 0 8px $gray;
 
   &__header {
     padding: .8rem;
@@ -9,6 +10,8 @@
     text-align: center;
     font-weight: bold;
     font-size: 2.8rem;
+    background: $blue;
+    color: $white;
   }
 
   &__input {
@@ -18,6 +21,8 @@
     font-size: 1.6rem;
     font-weight: bold;
     letter-spacing: .1rem;
+    border: none;
+    border-bottom: 1px solid $whitesmoke;
 
     &::placeholder {
       letter-spacing: .2rem;
@@ -32,7 +37,6 @@
   }
 
   &__item {
-    border: 1px solid blue;
     font-size: 1.8rem;
     padding: .8rem 1.6rem;
     display: flex;
@@ -45,6 +49,12 @@
     .fas {
       margin-right: auto;
       display: inline-block;
+      color: $red;
+      cursor: pointer;
+
+      &:hover {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -53,5 +63,13 @@
     padding: .8rem;
     font-size: 1.8rem;
     border: none;
+    color: $white;
+    background-color: $blue;
+    cursor: pointer;
+
+    &[disabled] {
+      color: darken($gray, 30);
+      background-color: $whitesmoke;
+    }
   }
 }
