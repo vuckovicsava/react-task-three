@@ -6,6 +6,6 @@ const Input = ({ inputValue, inputValueChange }) => (
     value={inputValue}
     onChange={inputValueChange}
   />
-)
+);
 
 export default Input;
