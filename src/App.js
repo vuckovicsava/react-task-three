@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './components/Header';
 import Input from './components/Input';
 import List from './components/List';
 import Button from './components/Button';
@@ -32,7 +33,8 @@ class App extends Component {
     const { inputValue, todos } = this.state;
 
     return (
-      <div className="App">
+      <div className="todo-app">
+        <Header text="todo app" />
         <Input inputValue={inputValue} inputValueChange={inputValueChange}/>
         <List todos={todos} removeTodo={removeTodo}/>
         <Button addTodo={addTodo}/>

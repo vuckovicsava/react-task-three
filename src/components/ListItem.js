@@ -1,7 +1,10 @@
 import React from 'react';
 
 const ListItem = ({ text, removeTodo }) => (
-<li>{text}<strong onClick={() => removeTodo(text)}>REMOVE</strong></li>
+  <li className="todo-app__item">
+    <span>{text}</span>
+    <i onClick={() => removeTodo(text)} class="fas fa-trash-alt"></i>
+  </li>
 );
 
 export default ListItem;
